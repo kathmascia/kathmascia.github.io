@@ -1,0 +1,223 @@
+<tw-storydata name="CommProject" startnode="1" creator="Twine" creator-version="2.3.13" ifid="5644391C-742C-4B3C-8A5A-452D46E7ABDF" zoom="0.6" format="Harlowe" format-version="3.2.1" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-sidebar{
+  display: none;
+}
+
+tw-link{
+  font-family: arial;
+  color: #4B9CD3;
+  "bold-face";
+}
+
+tw-passage img {
+	display: block;
+	margin: 0 auto;
+}
+
+tw-passage {
+  font-family: arial;
+}
+
+tw-story{
+  background-color: #D3D3D3;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="BEGINNING" tags="" position="420,93.33333333333333" size="100,100">&lt;center&gt; &#39;&#39;Welcome to campus!&#39;&#39; &lt;/center&gt;
+
+&lt;img src=&quot;https://mpng.subpng.com/20180219/qge/kisspng-green-grassland-sky-ecoregion-wallpaper-blue-sky-clipart-5a8a7a6b777fc7.6625753315190247474895.jpg&quot;&gt;
+
+You are a freshman attending the University of North Carolina at Chapel Hill, congratulations! College is the best 4 years of your life so make them count!
+
+[[Let&#39;s Begin!]]
+
+
+(set: $majorchanges to 1)
+(set: $extrasem to 1)
+
+</tw-passagedata><tw-passagedata pid="2" name="STEM" tags="" position="337,336" size="100,100">Welcome to STEM!!
+
+As a freshman STEM major, you need to complete all of your Gen-Eds before sophomore year so you have time for all of your med school pre-requisites.  You also need to take some basic sciences classes, so you&#39;ll have to enroll in about 16-17 hours of credits per semester. So fun!
+
+
+Now that your major is settled, you&#39;re gonna want a social outlet so you don&#39;t spend too mcuh time on school work. Do you want to join [[Greek Life]]?
+
+&lt;img src=&quot;https://wallpaperaccess.com/full/958180.png&quot; width=&quot;640&quot; height=&quot;360&quot;&gt;
+
+(set: $major to 1)
+</tw-passagedata><tw-passagedata pid="3" name="Humanities" tags="" position="487,336" size="100,100">Welcome to Humanities! 
+
+You can be a [[Business Major]] or a [[Social Sciences Major]], both are super easy and fun!! At least you aren&#39;t in STEM!</tw-passagedata><tw-passagedata pid="4" name="Business Major" tags="" position="534.6666666666666,477" size="100,100">To be a business major, all you have to do is get into Kenan-Flagler Business School which has a 30% acceptance rate! Super easy!
+
+Now that you have your major picked, do you want to get involved with [[Greek Life]]?
+
+&lt;img src= &quot;https://www.vippng.com/png/detail/180-1801695_illustration-of-people-having-a-meeting-business-setting.png&quot;&gt;
+(set: $major to 2)
+</tw-passagedata><tw-passagedata pid="5" name="Social Sciences Major" tags="" position="665,486" size="100,100">Congratulations on picking Social Sciences!
+
+You need to take 5 major classes this semester, so you&#39;ll only end up with about 30 hours of work outside of the classroom. 
+
+Now that you have your major picked, do you want to get involved with [[Greek Life]]?
+
+&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTS_s-zb_eFwQysbxiilSiVJ1XhlliIltPE1-XY3P0gal8OEawv1FnuNzp3Nx-hyieMIC0&amp;usqp=CAU&quot;&gt;
+
+(set: $major to 3)</tw-passagedata><tw-passagedata pid="6" name="Let&#39;s Begin!" tags="" position="416,220" size="100,100">First, let&#39;s pick your major! This is a super easy decision, just pick what you think you will be the most successful in and enjoy as a career for the &#39;&#39;rest&#39;&#39; of your life! 
+
+Don&#39;t worry, you can always change it.
+
+Do you want to go the [[STEM]] or [[Humanities]] path?
+
+</tw-passagedata><tw-passagedata pid="7" name="Greek Life" tags="" position="361.3333333333333,577.6666666666666" size="100,100">Welcome to Greek Life! 
+
+Oh wait, you can&#39;t just join sorry! You have to go through rush, but it only takes a week and costs about $100, so no worries!
+
+Do you want to [[rush]] or find a [[social outlet]] in other places?? Or, you don&#39;t have to find one [[at all]].
+
+</tw-passagedata><tw-passagedata pid="8" name="rush" tags="" position="281,780" size="100,100">Welcome to Greek Life! You owe $2,000 a semester and have to attend weekly chapter meetings, but there are super fun events every weekend and you can make a lot of friends. 
+
+However, to pay the dues you might need a job. Also, you&#39;ve been spending a lot of money getting food with your roommates and buying some UNC gear. 
+(set: $greeklife to $greeklife + 1)
+{
+(if: $greeklife &lt;= 1)[Do you want to look for a [[job]] or [[ask your parents for more money]]?]
+
+(else-if: $greeklife &gt; 2)[ [[Back to where we were]] ]. 
+}
+
+(set: $gl to true) 
+(set: $greeklife to 0)</tw-passagedata><tw-passagedata pid="9" name="social outlet" tags="" position="456,780" size="100,100">Instead, you join the intramural tennis team! This is a lot of fun, but it also takes up most of your time outside of school. 
+
+(set: $socialoutlet to 0)
+(set: $socialoutlet to $socialoutlet + 1)
+{
+(if: $socialoutlet &lt;= 1)[You&#39;ve also been spending a lot of money going out to eat and buying some new UNC gear for your games, I think it&#39;s time you look for a [[job]] or [[ask your parents for more money]].]
+
+(else-if: $socialoutlet &gt; 1)[ [[Back to where we were]] ]
+}
+
+
+(set: $gl to false)</tw-passagedata><tw-passagedata pid="10" name="change your major" tags="" position="168.66666666666666,585.3333333333334" size="100,100">Don&#39;t worry, changing your major is very common....but you have already changed you major $majorchanges times so make your decision carefully. This change has added $extrasem extra semesters of classes to your graduation path. 
+
+
+(set: $majorchanges to $majorchanges + 1)
+(set: $extrasem to $extrasem + 1)
+
+(if: $majorchanges = 1)[Now that your major is settled, you&#39;re gonna want a social outlet so you don&#39;t spend too much time on school work. Do you want to join [[Greek Life]]?]
+
+(if: $majorchanges &gt; 1)[Now that change is settled, time to get [[back out there]] and work hard on your new major!]</tw-passagedata><tw-passagedata pid="11" name="job" tags="" position="231.66666666666666,919" size="100,100">You apply for a job as a barista at Starbucks and get it! The job takes up about 12 hours per week, but you would make $10 an hour. 
+
+You have a lot on your plate right now, but it&#39;d be nice to feel independent from your parents.
+(set: $ttj to 0)
+(set: $ttj to $ttk + 1)
+{
+(if: $ttj &lt;= 1)[Do you [[take the job]] or [[ask your parents for more money]]?]
+(else-if: $ttj &gt; 1)[Looks like you better [[take the job]].]
+}</tw-passagedata><tw-passagedata pid="12" name="take the job" tags="" position="220,1079" size="100,100">Congratulations, you took the job at Starbucks! 
+
+Having some extra spending money never hurt, although you do have less time. 
+(set: $job to true)
+(set: $employed to 0)
+(set: $employed to $employed + 1)
+{
+(if: $employed &lt; 1)[ [[Next]].]
+
+(else-if: $employed &gt;= 1)[ [[Back to where we were]].]
+}</tw-passagedata><tw-passagedata pid="13" name="ask your parents for more money" tags="" position="371,1079" size="100,100">(set: $pm to 0)
+(set: $pm to $pm + 1)
+{
+(if: $pm &lt;= 1)[Your parents give you some extra money...this time. You should probably think about getting a job in the future, but for now you have extra time to hang out with your friends and study. [[Next]].]
+
+(else-if: $ttj &gt; 1)[Not an option this time, you should go back and reconsider that [[job]].]
+}
+
+
+
+
+(set: $job to false)</tw-passagedata><tw-passagedata pid="14" name="Next" tags="" position="371,1229" size="100,100">(if: $major is 1)[You&#39;ve been working hard at your science and math classes this semester, but you have your first chem midterm on Friday. 
+
+All of your friends are going out on Thursday to an LSDJ concert hosted by one of the frats. So you have to decide, do you [[go out]] or stay in to do [[work]] and study?]
+
+(if: $major is 2)[You have been working pretty hard in your classes and started to network with your professors and peers, which is evident by your 300 Linkedin connections.
+
+However, you have a big ECON 101 midterm on Friday. You always go out on Thursday with your friends, and this week they&#39;re going to a huge LSDJ concert in frat court. So, do you [[go out]] or stay in to do [[work]] and study?]
+
+(if: $major is 3)[You&#39;ve been working really hard in all of your classes and loving your major! But, you have a big Psych 101 paper due this Friday that you haven&#39;t started yet and it&#39;s already Wednesday.
+
+You always go out on Thursday with your friends, and this week they&#39;re going to a huge LSDJ concert in frat court. So, do you [[go out]] or stay in to do [[work]] and write that paper?] </tw-passagedata><tw-passagedata pid="15" name="go out" tags="" position="221,1409" size="100,100">Wow, that concert was crazy! You had the best time, but you wake up late with a splitting headache. 
+
+You scrambled to get to class on time, and unfortunately made a (if: $major is 1)[C on your chem exam] (if: $major is 2)[C on your econ exam] (if: $major is 3)[B- on your psych paper]. That&#39;s okay, your average is still a B- but exams are coming up soon so I&#39;d suggest working a little harder next time!
+
+Now that midterms are over, let&#39;s [[move on]]. 
+
+(set: $study to false)</tw-passagedata><tw-passagedata pid="16" name="work" tags="" position="373,1379" size="100,100">Smart decision, and your grades will thank you. 
+
+You made an A on that (if: $major is 1)[chem midterm] (if: $major is 2)[ECON exam] (if: $major is 3)[Psych paper], and the average was a C, Congrats! 
+
+Now that midterms are over, let&#39;s [[move on]]. 
+
+(set: $study to true) </tw-passagedata><tw-passagedata pid="17" name="move on" tags="" position="294.33333333333337,1570.6666666666667" size="100,100">(either: true,false)
+{
+(if: true)[Uh oh, your long distance boyfriend from high school broke up with you! How dare he! I thought high school love lasted forever...right?
+
+Guess not. You can have a week of wallowing in sadness, eating ice cream for dinner, and skipping classes, but then you gotta get [[back out there]].]
+
+(else-if: false)[For some reason, your major just hasn&#39;t been as fun as you thought it&#39;d be. You aren&#39;t as interested in the classes anymore so it&#39;s hard to stay motivated. So, its time to [[change your major]].]
+}</tw-passagedata><tw-passagedata pid="18" name="back out there" tags="" position="457.6666666666667,1600.6666666666667" size="100,100">Hard times happen but you gotta bounce back. To get back on your feet, do you wanna blow all your money this weekend on a [[nice dinner]] with your friends, or stay in and [[watch a movie]]? 
+
+&lt;img src= &quot;data:image/png;base64,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&quot;&gt;</tw-passagedata><tw-passagedata pid="19" name="nice dinner" tags="" position="644.3333333333334,1665.6666666666667" size="100,100">That dinner was fun, but oops you are out of money for groceries this week! Time to beg your friends for their food! 
+
+You keep working hard at school and having fun, but the days are feeling a little monotonous. I think it&#39;s time you [[shake things up]].
+</tw-passagedata><tw-passagedata pid="20" name="watch a movie" tags="" position="599.3333333333334,1457.3333333333333" size="100,100">Staying in is always needed and now with the money you saved, you can buy your groceries for this week. 
+
+You go grocery shopping, keep doing your schoolwork, and seeing your friends but life is getting a little too monotonous for you so let&#39;s [[shake things up]]. </tw-passagedata><tw-passagedata pid="21" name="shake things up" tags="" position="794.3333333333334,1587.3333333333333" size="100,100">(if: $sociallife is false)[It&#39;s time you put yourself out there a bit more. It&#39;s never too late to join [[Greek Life]] now in the spring or apply for a [[job]].]
+
+(if: $gl is true and $job is true)[You&#39;re already pretty involved in Greek Life and at work, some might even say you&#39;re thriving. Maybe thriving too much because now you&#39;re sick! Time for a visit to [[Campus Health]].]
+
+(if: $gl is true and $job is false)[You&#39;ve been loving your time in Greek Life, maybe a little too much...You got fined for having alcohol at an event! Instead of asking for money this time, I think it&#39;s time you take that [[job]].
+&lt;img src=&quot;https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs9PBNPI6F9kAbOQbpNBCybwShyahWGhFIUg&amp;usqp=CAU&quot;&gt;]
+
+(if: $gl is false and $job is false)[You&#39;ve been loving intramural tennis, but you&#39;ve gone out to eat with the team one too many times after practice. I think it&#39;s time you apply for that [[job]] again.]
+
+(if: $gl is false and $job is true)[You&#39;re already pretty involved in intramural sports and at work, some might even say you&#39;re thriving. Maybe thriving too much because now you&#39;re sick! Time for a visit to [[Campus Health]].]</tw-passagedata><tw-passagedata pid="22" name="at all" tags="" position="597.6666666666667,697.6666666666666" size="100,100">Nothing wrong with being a little more introverted! You find friends in unexpected places, so no need to force it. 
+
+To keep you busy, what if you considered getting a [[job]]?
+
+(set: $sociallife to false) </tw-passagedata><tw-passagedata pid="23" name="Campus Health" tags="" position="894.3333333333334,1404" size="100,100">Welcome to Campus Health! You might end up coming here...a lot.
+
+After about an hour of waiting around and being moved between different rooms and doctors, you have been diagnosed with (mouseover: &quot;diagnosed&quot;)[a common cold]. 
+
+Here&#39;s some medicine to take three times a day for the next month, if you don&#39;t feel better by then please come back as it may be mono. 
+
+Now that&#39;s dealt with, lets get [[Back to where we were]].
+
+&lt;img src= &quot;data:image/jpeg;base64,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&quot;&gt;</tw-passagedata><tw-passagedata pid="24" name="Back to where we were" tags="" position="958.3333333333333,1208.9999999999998" size="100,100">Fast forward a bit, and you are rounding out your freshman year of college as finals season approaches. You&#39;ve been studying for so long everyday but you&#39;re still a little behind in your classes.
+
+Today you&#39;re running on 4 hours of sleep because you had an assignment due last night, and your first final is later this week so you have to keep studying. You also need to start thinking about this summer and packing for move out. Just don&#39;t forget that you also
+
+
+(live: 5s)[(goto: &quot;fall asleep&quot;)]</tw-passagedata><tw-passagedata pid="25" name="fall asleep" tags="" position="1098.3333333333333,1210" size="100,100">Oops, you fell asleep in class!Looks like you&#39;ve been staying up too late studying for finals, but they&#39;re right around the corner so you can&#39;t stop now. 
+
+&lt;img src= &quot;https://pngimg.com/uploads/alarm_clock/alarm_clock_PNG19.png&quot; height=&quot;200px&quot; width=&quot;200px&quot;&gt;
+
+It&#39;s time to take your [[finals]]!</tw-passagedata><tw-passagedata pid="26" name="finals" tags="" position="1236.6666666666665,1210" size="100,100">Happy finals season! You have been working so hard, you just have to pass one final [[test]]. </tw-passagedata><tw-passagedata pid="27" name="test" tags="" position="1374.9999999999998,1215" size="100,100">Which of these is not a form of new media art?
+
+[[A)]] Photoshop
+[[B)]] 3D Modeling
+[[C)]] Writing a book
+[[D)]] Creating websites with html</tw-passagedata><tw-passagedata pid="28" name="A)" tags="" position="1149.9999999999998,1365" size="100,100">Not quite. Try again so you don&#39;t fail your freshman year. 
+
+Go back to [[test]].
+
+&lt;img src=&quot;data:image/png;base64,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&quot;&gt;
+
+</tw-passagedata><tw-passagedata pid="29" name="B)" tags="" position="1299.9999999999998,1365" size="100,100">Not quite. Try again so you don&#39;t fail your freshman year. 
+
+Go back to [[test]].
+
+&lt;img src=&quot;data:image/png;base64,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&quot;&gt;
+</tw-passagedata><tw-passagedata pid="30" name="C)" tags="" position="1449.9999999999998,1365" size="100,100">Correct! You passed all of your finals freshman year. 
+
+The journey wasn&#39;t easy, and a little different for everyone but you successfully made it. See you back sophomore year!
+
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Elongated_circle_2024.svg/1280px-Elongated_circle_2024.svg.png&quot; width=&quot;400&quot; height=&quot;200&quot;&gt;</tw-passagedata><tw-passagedata pid="31" name="D)" tags="" position="1599.9999999999998,1365" size="100,100">Not quite. Try again so you don&#39;t fail your freshman year. 
+
+Go back to [[test]].
+
+&lt;img src=&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADjCAMAAADdXVr2AAAA/FBMVEX////JAADNAADrAADyAADSAADvAADPAADpAADUAAD0AADmAADYAADHAAD2AADiAAD7AADBAAC7AAD++vr/9PT+6Oj46ur+ycnx09P03d3/vb39YmL+09P+4eH/8PD+5OT5ExPuGBjxeHjvY2Prr6/ww8Poo6PVRUXPHR3SOjrXYWHVVVXJPDzLSkrGMjLPYmL+fHz+cXH+lpb+PDz+oqL+rq79MjL9Wlr+wsL9Jyf8SUn4Pz/4SEj4iYn5nJzzJSXxV1fuLi7vS0vwbGzpGhrqXV3oTEzuiYnnQEDlMzPkJCTjc3Pni4vpl5fttrbhgIDRLCzFFhbMU1PhpaWKvbPEAAAIq0lEQVR4nN3deV/aTBAH8BFFRBZMABUtHkVFa+9WW30Uzx5WRWz7/t/LE7SUK8cev91Jnb/9zM43kGSZ7EYi2Xi3LP2n/2C897y0+D58hKcMdGnx7Xke2veg87xFcFqd2O8WcgRN+czz0uLbfywE+fn91fH7lnuFfIKl/Ox5afEt9wtB+YZ0vL6DwUIOISkvPC8tvsXhQg4r5in/G9V5Xt08q1YsjhaybuwL0XH56uOFrFfNUh6F6Xh8ITpT38dwHYdvJaISA1+kzr0vSud5q7opP0XrXPuiddq+WJ3nrWABsTEfW4mW7zBe59K3mlDJvHLGSqLOnS9Jp+6T0bnyVSUqWVPKWFmX0bnxyejUfFVJnepR0wnZWuSPdLUkq9M5q9VC9nvklWR9qyWVsOurHMpXIudT01n2napUIjPTUNVZ9X1SqyTZN6+ss+g7Uq0kyaejK5W0Z7VgXakU30nQ01nyHetUEudb0dRZ8V3oVRLt09dZ8H3WreTAgg7ue6ZfSbjPTAf2GehKpbAnPfVZQ17JsGs1GO+Nipkd95nrSqZduX68Myxmdh+vw/lMdWO++iwkzLvG3WggShn0LSISdgPha2FK2cPrED6Qru87QCXsxqmh7wRXysmjbgqXcdbUdwIsZupDkHAZqzPz7UGL6foaaN7sqbZuH1zLVIvocgodur59eCXdy8sGPKuebxlex+PF5Qye91xDdwCv4sOfzBfwzOq+RXgNrb+5j6fRuVVXRS2iK5huDWQ/AidX9dXhusZQ/vNpdKj46vDR342MwOmrwce+HB2i8hw+xrGkbgU+8sb4IJV1+ChyvjX4uCE6oip8mOkLFt1Z+ECr8IEkfPPuxlyAD5Xowx/SmBHxhzLBh9fFnu/4i1jUmfAQ+NM94W7k1OdcZ2MCEenD32olZvKLk+hBJ8N9eJ3U70xHvsopepgvcl2eZbwvZB4Bn+TOyPawXPjO0WPMyD/h2J+Ex4jvGD6AyvObPfjok0O/Ua7g6dWenp7Axx/0XcCTLyjpiL7DK+j7zuCpVXVELXgNkw1bOp11UQ14FY++DXhavVWzl/A6ur4NdM4Z3TXBGzPwUloNdM6ZmqYuOEvwPrjOZL/IBdwHDiNdcP+dSXeY7pX8wQ2Ii4L5TtBzbkN0FKJW/6nENbciKgqQtyBUvnA7wqOwidARVZ9zS8KiMLouTt/HTQkJnI5otVDg5oxE4QSnI5ovpCygOqI1bs9w3GJ1RCvcosH4jtYR1bhN/WglV6sedW5VLxrJtf7DPks6oq05bloQY4secHHH7wtdFoCKTW7fV5s6oiarb86yjqjN6Jv7ZltHdMvmc6Ej+s7km7tyoSNqzbHEDzc6osaT1hFdutddu9MRbTxpHdFXtzrJRQ+4+OaU51pHdOVQB9yWKx0/nrSO6NqRztIrKVLiU18WAIrKFwc6268riomqfZ39l01x+ly+qi8kFp60jmjepk5/0QMs1qzhBNdLeIdi5UnriGrCim6L29WLugVfenR2fPBnXPrRxOvmRJtb1YumnZOvye16jE0rusAHWtlhFrZ0ge+O20Z0Z02XhsvnlrAazD7LOiFYp53WdUIw/mio2dcJwfaD1olOCKZ2hCOdECytsiVXOiEYGp0OdUI4b8LPu9SJa8c+tzohHD68DGLBsU4IRw/WH6LqXCeEk2URbDohrC/Z+ROVPAtPvHSjy/LohNh1odvh0glxY5/HqBOiY1t3z6kTecvtwStWXeCz2h7k1gU+i+3BbW5cEHlr7cFtphvecOQttQe/pkInRNZK++xlSnSBz8KTv/ToAh+8PbibT1Nkl7C6G27QSGB9adMFAVyL1clyY0IC5kulLp8HtQdv06nLZyDts3ZKdfn8DsDXznErIiN7b6xrplcX+F48ZV3g2zbSbeayKQ8T3x1al4Mfrpx+exCva27hfbrtQXgpubaFQ5bN6bUHtzLoOh7aXJvotNmcTnuwDtf9qcKCT709WLOls+JTbQ/WMuBzZPAMacJ9GbX24FImB46h878JT59RaQ/idSNXbws++fYgXjd2723jfbLtwQX00JmQmYUFn1z7zImOzbcKHzVi1nuL9yW3z6rwzy5yTs/gq+bAY2ZifnFa8MW3zypFtC62X9CBf1UycasHKztOdVZ80e3BQAeOnXhd14eOicj2GV6X3Km7mYAPGjHSPXqgokwfEu8LPyFeoIeR7CLjfWEX6xfwUWSfAeyiR54Yv9Vuw8eQX+CN941OA1/DR1B5PoX3Df8AewnPr7b5AD/+W6tHT3VrBd7Xb5/hdepPvvFnR88HvzIXdZ7r469tj+3Bm+IENop6q062wWVMFLvtwU5KdDZ8v1Ok684swKW0aQvMK5qsZ8P6Hr6cWJ+RLpjVI0t57FwjfYY6pK/Y68vjfEXzlaQoX7H/1KEG8hUR64B38KXUfERKH7LKubIDONgjpSA+vyJojTrA54+eJEvGKVG6wOcbFjOm6/oMA7h/ompWSYgu8PlGKaG7Q4x8fvjNyejzA+/tMfBF6Ix88J1Zq3Ad0YLm99O3sO9M0+fHTegX9FJa2TWoVUusTi+n/zY2pUtfgk7nO2FLp3GuJOrUj5n/y5ZO2efLtHjUrsk2dYr3Yild4FPI6b+2qVPySeqCOd9P2aT+K6s4UvBJ6+R99nWyPt9XaYtX7mWS+m+soQZCxuf7ahuKZD4/N7rub220Loh7PynMt4BIRq2cVIrGZrA3CSl/unu/T5JPa6tbvM+hLsmnudHtVVxOt+9m2orxaW/ji/G5frNWtM+gkkif+/eiRfjMzpHX4TqOf5EQ6jO9AoT6eP4BRIjP/Pr2ayxpmesfQNyNlnIPuAKM+th0Yz7MvGJ3KGkZ/DoDpRjyoeaEb8sp0RH9LsN1g74y9z+A6PnKyN9iPR+7rueD6nq+FOiImmW4jqjTTcr+ju+HaJbL+A5Pp5wSHVHbRg+kkxadSvwP1jIXuqIJYpEAAAAASUVORK5CYII=&quot;&gt;
+</tw-passagedata></tw-storydata>
+
